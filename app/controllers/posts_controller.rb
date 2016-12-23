@@ -18,4 +18,8 @@ class PostsController < ApplicationController
  def post_params
   	params.require(:post).permit(user_id, :photo, :description)
   end
+  
+  def index 
+  	@posts = Post.all.order('created_at DESC')
+  end
  end 
