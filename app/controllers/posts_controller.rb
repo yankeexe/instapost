@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+	before_action :is_owner?, only: [:edit, :update, :destroy]
 	before_action :authenticate_user!, only: [:new, :create]
 	 def index 
   		@posts = Post.all.order('created_at DESC')
@@ -31,6 +32,20 @@ class PostsController < ApplicationController
  		end
  	end
 
+ 	def destroy 
+ 		@post = Post.find(params[:id])
+ 		@post.destroy
+ 		redirect_to root_path
+ 	end 
+
+ 	def show 
+ 		@post= Post.find(params[:id])
+ 	end	
+
+ 	private
+ 	def is_owner?
+ 		redirect_to root_path if Post.find(params[:id].user != current_user)
+ 	end
  	
  private
 
