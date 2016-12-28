@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  
   	root 'posts#index'
-	resources :posts	
-	devise_for :users
- 
+	devise_for :users, :path_names =>{ :sign_up => 'register'}	
+ 	resources :posts do	
+ 	resources :comments	
+ end
 end
 
