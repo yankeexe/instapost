@@ -6,10 +6,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
   </head>
 
   <body>
   		<nav>
+      <span class="pull-right brand">Instapost</span>
+
   		<% if user_signed_in? %>
       Signed in as <%= current_user.name %>
   		<%= link_to 'New Post', new_post_path %>
