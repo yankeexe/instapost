@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 	devise_for :users, :path_names =>{ :sign_up => 'register'}	
  	resources :posts do	
  	resources :comments	
- 	resources :users, only: :show
+ 	resources :users, only: :show	
  end
 end
 
