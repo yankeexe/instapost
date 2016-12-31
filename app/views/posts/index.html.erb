@@ -1,38 +1,61 @@
 <% @posts.each do |post| %>
+  <div class="container">
+    <div class="row">
+     <div class="col-lg-6 col-lg-offset-3">
+      <div class="row">
+        <div class="title_wrapper">
+          <%= image_tag post.user.photo, class: 'prof_pic_small' %>  
+     
+         <%= link_to post.user.name, post_user_path(post.id, post.user.id),class: 'prof_name' %>
+        </div>
+      </div>
+      </div>
+      
+      <div class="col-md-6 col-md-offset-3">
+        <%= image_tag post.photo, class: 'photo' %>
+      </div>
+      
+      <div class="col-xs-2 col-xs-offset-3">
+        <%= link_to post.user.name, post_user_path(post.id, post.user.id),class: 'prof_name' %> <%= post.description %>
+      </div>
 
-  <div class="post_box">
-    <div class="post_header">
-      <%= image_tag post.user.photo, class: 'prof_pic_small' %>  
-      <%= console %>
-      <%= link_to post.user.name, post_user_path(post.id, user.id) %>
-
+          <div class="col-xs-5">
+            <span class="view_post"><%= link_to 'View Post', post_path(post.id)%></span> 
+              <% if post.user == current_user %>|
+            <span class="edit_post"><%= link_to 'Edit Post', edit_post_path(post.id) %></span>|
+            <span class="delete_post"><%= link_to 'Delete Post', post_path(post.id), method: :delete %></span>
+            <%end%> 
+          </div>
     </div>
-    <div class="post_body">
-  <%= image_tag post.photo %>
-  <%= post.description %>
-  <%= link_to 'View Post', post_path(post.id) %>
+    </div>
+      <div class="container">
+      <div class ="row">
+        <div class="col-lg-2 col-lg-offset-3">
+          <% post.comments.each do |comment| %>
+          <%= link_to comment.user.name, post_user_path(post.id, comment.user.id), class: 'prof_name' %>  <%= comment.text %>
+        </div>
+      </div>
+      </div>
+     
+      <div class="col-lg-3">
+        <% if comment.user === current_user %>
+        <% link_to 'Delete Comment', post_comments_path(post_id: post.id, id: comment.id), method: :delete %>
+        <% end %> 
+        <% end %>
+      </div>
 
-
-  <% if post.user == current_user %>
-  	<%= link_to 'Edit Post', edit_post_path(post.id) %>
-  	<%= link_to 'Delete Post', post_path(post.id), method: :delete %>	
-  <%end%> 
-
-
- <%= post.comments.each do |comment| %>
-  <p> <%= comment.user.name %> <%=comment.text %> </p>
-  <% if comment.user === current_user %>
-  <% link_to 'Delete Comment', post_comments_path(post_id: post.id, id: comment.id), method: :delete %>
-  <% end %> 
-  <% end %>
-
-  
-  
-   <% if user_signed_in? %>
-    <%= simple_form_for Comment.new, url: post_comments_path(post), method: :post do |f| %>
-    <%= f.input :text, label: 'Comment', placeholder: 'Add a comment...' %>
-    <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
-  <% end %>
-<% end %>
+      <div class="container">
+     <div class= "row">
+        <div class="col-lg-5"> 
+        <% if user_signed_in? %>
+        <%= simple_form_for Comment.new, url: post_comments_path(post), method: :post do |f| %>
+        <%= f.input :text, label:'', placeholder: 'Add a comment...' %>
+        <%= f.submit 'Post', class: 'btn btn-primary btn-block thich' %>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+    </div>
+    
 <% end %>
 

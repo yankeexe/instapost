@@ -32,6 +32,7 @@ class PostsController < ApplicationController
  		end
  	end
 
+
  	def destroy 
  		@post = Post.find(params[:id])
  		@post.destroy
@@ -42,16 +43,15 @@ class PostsController < ApplicationController
  		@post= Post.find(params[:id])
  	end	
 
+ 	
  	private
  	def is_owner?
- 		redirect_to root_path if Post.find(params[:id].user != current_user)
+ 		redirect_to root_path if Post.find(params[:id]).user != current_user
  	end
- 	
- private
 
- def post_params
-  	params.require(:post).permit(:user_id, :photo, :description)
-  end
+ 	def post_params
+  		params.require(:post).permit(:user_id, :photo, :description)
+  	end
   
  
  end 

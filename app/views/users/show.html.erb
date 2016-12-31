@@ -1,8 +1,10 @@
-<%= image_tag @user.photo %>
-<%= @user.name %>
+<%= image_tag @users.photo, class: 'prof_pic_small' %>
 
-<%= pluralize(@user.posts.count,'post') %>
+<%= @users.name %>
+
+<%= pluralize(@users.posts.count,'post') %>
  
-<% @user.posts.each do |post| %>
+<% @users.posts.each do |post| %>
 	<%= image_tag post.photo %>
 <% end %>
+	

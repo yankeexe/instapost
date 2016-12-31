@@ -2,6 +2,7 @@ body{
 	background-color: #fafafa;
 }
 
+/* ----------NavBar-----------------*/
 nav {
 	  border-bottom: 1px solid #dbdbdb;
 	  background-color: #ffffff;
@@ -12,6 +13,8 @@ nav {
 	font-family: 'Satisfy', cursive;
 	font-size: 26px;
 	vertical-align: middle;
+	margin-top: 15px;
+	text-decoration: none;
 }
 
 .nav_links{
@@ -25,35 +28,90 @@ nav {
 	line_height: 78px;
 }
 
+.nav_links{
+	margin: 0 60px;
+}
+
+/* ------------Post Heading-------------- */
+
+img.prof_pic_small{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+a.prof_name{
+	vertical-align: text-top;
+	padding-left: 5px;	
+	font-weight: bold;
+	color: black;
+	text-decoration: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.title_wrapper{
+	 
+	margin-top: 5px;
+}
+	
+/* ------------Post Body-------------- */
+
 .photo {
   width: 100%;
-  max-height: 100%;
+   
+ }
+
+
+.post_description{
+	font-weight: italic;
+
 }
 
-.post_box {
-  background-color: white;
-  border: 1px solid #edeeee;
-  border-radius: 3px;
-  margin: 60px 0px;
-  margin-left: -1px;
-  margin-right: -1px;
+.post_description p{
+	
+	margin-left: 15px
 }
 
-.post_header{
-  height: 64px;
-  padding: 14px 20px;
-  font-weight: 600;
+	
+/* ------------Post Comments-------------- */
+
+.post_comments a{
+	text-decoration:  none;
+	font-weight: bold;
+	color: black;
+	vertical-align: middle;
 }
 
-.post_body{
-  padding: 10px 24px 0px 24px;
+/* ------------Post Options-------------- */
+
+.col-xs-5 {
+	width: 41.66666667%;
+    margin-left: 130px;
+    text-decoration: none;
 }
 
-.post_comments {
-  padding: 10px 25px;
+.view_post a{
+	font-weight: bold;
+	text-decoration: none;
 }
 
-.timestamp {
-  color: #a5a7aa;
-  font-weight: 500;
+.edit_post a{
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.delete_post a{
+	font-weight: bold;
+	text-decoration: none;
+}
+/* ------------Comment Box-------------- */
+
+.col-lg-5 {
+    width: 50%;
+   float: none;
+    margin-left: 290px;
 }

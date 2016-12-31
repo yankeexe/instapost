@@ -3,5 +3,6 @@
 	belongs_to :user
 	validates :photo, :description, :user_id, presence: true
 	has_many :comments
+	acts_as_votable
 end
 
