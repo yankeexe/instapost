@@ -2,6 +2,11 @@ body{
 	background-color: #fafafa;
 }
 
+.wrapper{
+width: 100%;		
+margin-left: 50px;
+}	
+
 /* ----------NavBar-----------------*/
 nav {
 	  border-bottom: 1px solid #dbdbdb;
@@ -56,12 +61,13 @@ a.prof_name{
 .title_wrapper{
 	 
 	margin-top: 5px;
+	margin-left: 8px;
 }
 	
 /* ------------Post Body-------------- */
 
 .photo {
-  width: 100%;
+  width: 80%;
    
  }
 
@@ -76,21 +82,11 @@ a.prof_name{
 	margin-left: 15px
 }
 
-	
-/* ------------Post Comments-------------- */
-
-.post_comments a{
-	text-decoration:  none;
-	font-weight: bold;
-	color: black;
-	vertical-align: middle;
-}
-
 /* ------------Post Options-------------- */
 
 .col-xs-5 {
 	width: 41.66666667%;
-    margin-left: 130px;
+    margin-left: 75px;
     text-decoration: none;
 }
 
@@ -110,8 +106,36 @@ a.prof_name{
 }
 /* ------------Comment Box-------------- */
 
-.col-lg-5 {
-    width: 50%;
-   float: none;
-    margin-left: 290px;
+.form-horizontal .form-group {
+    margin-left: 352px;
+    margin-right: 488px;
 }
+
+
+.col-lg-offset-3 {
+    margin-left: 353px;
+}
+.post_like {
+  .fa {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;	
+}
+}
+
+
+
+
+
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: teal;
+    width: 40px;
+}
+
+.submit_button{
+	margin-left: 852px;
+}																									
