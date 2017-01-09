@@ -61,7 +61,7 @@ a.prof_name{
 .title_wrapper{
 	 
 	margin-top: 5px;
-	margin-left: 8px;
+	
 }
 	
 /* ------------Post Body-------------- */
@@ -113,7 +113,7 @@ a.prof_name{
 
 
 .col-lg-offset-3 {
-    margin-left: 353px;
+    margin-left: 345px;
 }
 .post_like {
   .fa {
@@ -124,18 +124,72 @@ a.prof_name{
 }
 }
 
+.post_like {	
+	margin-left: 340px;
+}
 
 
 
-
-input, button, select, textarea {
+input, select, textarea {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
     color: teal;
-    width: 40px;
+    width: 30%;
+
 }
 
 .submit_button{
-	margin-left: 852px;
+	margin-left: 830px;
 }																									
+.form-control{
+	width: 520px;
+}
+
+.user_header{
+margin-left: 400px;
+font-weight: bold;
+}
+a:hover, a:focus {
+    color: #23527c;
+    text-decoration: none;
+    color: black;
+}
+
+/* ------------New Page-------------- */
+input[type="file"] {
+    display: block;
+    width: 100%;
+
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-left: 421px;
+
+    }
+
+input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {
+    width: 30%;
+    
+}
+
+.form_new{
+	margin-top: 20px;
+}
+
+/* ------------Edit Settings-------------- */
+
+.yankee.btn-primary.btn-block{
+	margin-left: 50px;
+}
+
+.field{
+	padding-left:100px;
+
+}
+
+.new.btn.btn-primary.btn-block{
+	margin-left: 422px;
+	width: 38%;
+}
